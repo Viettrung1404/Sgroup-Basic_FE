@@ -1,0 +1,249 @@
+body {
+    padding: 40px 70px 40px 80px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+.j {
+    font-size: 23px;
+    background-color: #222;
+    color: white;
+    padding: 10px 17px;
+    border: 1px solid #222;
+    border-radius: 7px;
+    margin-right: 10px; 
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 1030px; 
+}
+
+.icon {
+    font-size: 10px;
+    background-color: crimson;
+    color: white;
+    padding: 6px 10px;
+    border: 1px solid crimson;
+    margin-right: 10px; 
+    border-radius: 50%;
+}
+
+.no_margin_right {
+    margin-right: 0;
+}
+
+img {
+    height: 620px;
+}
+
+.introduce {
+    position: relative;
+    margin: 40px 0 60px;
+    width: 100%;
+}
+
+.introduce_text_block {
+    position: absolute;
+    height: 500px;
+    top: 25px;
+    left: 660px;
+    width: 600px;
+}
+
+h1.introduce_text {
+    font-size: 65px;
+    margin: 0;
+}
+
+h5.introduce_text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    margin-top: 0px;
+}
+
+h4.introduce_text {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.achievement {
+    color:crimson;
+    font-size: 45px;
+    font-weight: 1000;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+span.introduce_text {
+    margin-right: 100px;
+}
+
+span.introduce_text2 {
+    margin-right: 65px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+span.introduce_text3 {
+    margin-right: 95px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.about_me {
+    width: 100%;
+}
+
+h1.about_me {
+    margin:0;
+    font-weight: 800;
+    font-size: 20px;
+    width: fit-content;
+    padding-bottom: 5px;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 4px;
+    border-style: solid;
+    border-color: crimson;
+}
+
+p.about_me {
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 1.8;
+    width: 100%;
+    box-sizing: content-box;
+    line-clamp: 1.6;
+}
+
+.download {
+    margin: 70px auto 120px;
+}
+
+p.download {
+    border: 2px solid red;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: red;
+}
+
+div.skills {
+    height: 300px;
+    margin: 0 0px 100px 0px;
+}
+
+span.skills {
+    margin: 0 550px 80px 0px;
+    font-weight: 800;
+    font-size: 20px;
+    width: fit-content;
+    padding-bottom: 5px;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 4px;
+    border-style: solid;
+    border-color: crimson;
+}
+
+span.otherskills {
+    margin: 0 0px 80px 0;
+}
+
+div.skill_list {
+    display: block;
+    margin: 60px 0 50px;
+}
+
+span.skill_list {
+    margin: 50px 25px 20px 0;
+    border: 1px solid #999;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 13px 30px;
+    font-size: 17px;
+}
+
+span.last_skill {
+    margin: 50px 73px 20px 0;
+}
+
+span.last_skill2 {
+    margin: 50px 150px 20px 0;
+}
+
+h1.experience {
+    margin-bottom: 45px;
+}
+
+div.time {
+    height: 25px;
+    margin: 0 0 10px;
+}
+
+span.time {
+    margin: 90px 568px 10px 0px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+div.company {
+    height: 40px;
+    margin: 0 0 20px;
+}
+
+span.company {
+    margin: 90px 442px 30px 0px;
+    font-size: 35px;
+    font-weight: 200;
+    list-style: none;
+}
+
+div.job {
+    height: 30px;
+    margin: 0 0 20px;
+}
+
+span.job {
+    margin: 90px 469px 35px 0px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+span.no_margin_right {
+    margin-right: 0;
+}
+
+.decription {
+    font-size: 20px;
+    width: 500px;
+    line-height: 1.5;
+    height: 284px;
+}
+div.inline_div {
+    display: inline-block;
+    margin: 0px 199px 40px 0;
+}
+
+.text {
+    text-align:start;
+
+}
+
+div.no_margin_right{
+    margin-right: 0;
+}
+
+ul.decription_text {
+    line-height: 1.7;
+}
