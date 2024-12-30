@@ -352,7 +352,6 @@ nav {
 .sadie:hover .content div::before {
     opacity: 1;
     top: 0;
-
 }
 
 .sadie .content p{
@@ -376,12 +375,12 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
-	.template figure {
+    .template figure {
         display: inline-block;
         float: none;
         margin: 10px auto;
         width: 100%;
-	}
+    }
     main .title {
         padding: 0;
         text-align: center;
