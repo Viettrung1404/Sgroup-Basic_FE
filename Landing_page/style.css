@@ -1,0 +1,307 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    tab-size: 4;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(22, 31, 50);
+    color: rgb(10, 20, 40);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    min-height: 100vh;
+    text-rendering: optimizespeed;
+}
+
+body.riotbar-present * {
+    scroll-margin-top: 80px;
+}
+
+/* Phần Navbar header */
+.margin-top-80px {
+    margin-top: 80px;
+}
+
+.riotbar-wrapper {
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    border: 0;
+}
+
+.riotbar-content {
+    background-color: #111;
+    border-bottom: 2px solid rgba(51, 51, 51, .25);
+    font-family: "FF Mark W05", Arial, sans-serif;
+    font-size: 14px !important;
+    font-weight: bold;
+    height: 80px;
+    line-height: normal;
+    position: relative;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    z-index: 3000000;
+}
+
+.riotbar-left-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 36px;
+}
+
+.riotbar-branding-switcher {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.riotbar-logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.riotbar-logo:hover .riotbar-fist-logo{
+    fill: #eb0029;
+}
+
+.riotbar-logo:hover .riotbar-app-switcher-trigger-arrow svg5{
+    fill: #eb0029;
+}
+
+.riotbar-fist-logo {
+    width: 75px;
+    height: 24px;
+    fill: #f9f9f9;
+    position: relative;
+    margin: 0;
+}
+
+.riotbar-app-switcher-trigger-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.riotbar-app-switcher-trigger-arrow svg {
+    margin-left: 12px;
+    fill: #7e7e7e;
+    width: 8px;
+    height: 5px;
+}
+
+
+.riotbar-center-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.riotbar-desktop-logo-outer {
+    height: 80px;
+    margin-left: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.riotbar-desktop-logo-outer a {
+    min-width: 38px;
+    display: block;
+}
+
+.league {
+    display: block;
+    max-height: 26px;
+}
+
+.riotbar-desktop-navigation-wrapper {
+    opacity: 1;
+    margin-left: 18px;
+    transition: opacity ease .3s;
+    width: 100%;
+    height: 80px;
+}
+
+.desktop-link-item {
+    display: inline-flex;
+    position: relative;
+    height: 80px;
+    cursor: pointer;
+}
+
+.desktop-link-item a, 
+.desktop-link-item .news, 
+.desktop-link-item .discover,
+.desktop-link-item .more {
+    display: flex;
+    margin: auto;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    color: #f9f9f9;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: .08em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98), border-color .5s cubic-bezier(0.06, 0.81, 0, 0.98);
+    text-decoration: none;
+}
+
+.desktop-link-item:hover a, 
+.desktop-link-item .news:hover, 
+.desktop-link-item .discover:hover,
+.desktop-link-item .more:hover {
+    color: rgb(200, 170, 110);
+}
+
+.desktop-link-item a:hover, 
+.desktop-link-item .news:hover .desktop-link-item-news, 
+.desktop-link-item .discover:hover .desktop-link-item-discover
+.desktop-link-item .more:hover .desktop-link-item-more {
+    display: none;
+}
+
+.desktop-link-item a:hover,
+.desktop-link-item .news:hover .desktop-link-item-news-hover, 
+.desktop-link-item .discover:hover .desktop-link-item-discover-hover
+.desktop-link-item .more:hover .desktop-link-item-more-hover {
+    display: inline-block;
+}
+
+.desktop-link-item a p, 
+.desktop-link-item .news p,
+.desktop-link-item .discover p,
+.desktop-link-item .more p {
+    padding: 7.5px 16px;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.desktop-link-item-game:hover .desktop-link-item-underline, 
+.desktop-link-item-champions:hover .desktop-link-item-underline, 
+.desktop-link-item-patchnotes:hover .desktop-link-item-underline,
+.desktop-link-item-discover:hover .desktop-link-item-underline,
+.desktop-link-item-esports:hover .desktop-link-item-underline,
+.desktop-link-item-universe:hover .desktop-link-item-underline,
+.desktop-link-item-merch:hover .desktop-link-item-underline,
+.desktop-link-item-more:hover .desktop-link-item-underline
+{
+    background-color: rgb(0, 160, 186);
+    position: absolute;
+    bottom: 7px;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.desktop-link-item:hover p {
+    background: rgba(128, 128, 128, .3);
+    border-radius: 6.4px;
+}
+
+
+/* News in navbar */
+.desktop-link-item-more-hover,
+.desktop-link-item-discover-hover,
+.desktop-link-item-news-hover {
+    display: none;
+}
+
+.submenu-wrapper {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 69px;
+    background-color: #292929;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, .2);
+    border-radius: 0 0 2px 2px;
+    text-align: left;
+    font-size: 13px;
+    min-width: 200px;
+    opacity: 0;
+    transition: opacity .5s cubic-bezier(0.06, 0.81, 0, 0.98) 0s, visibility 0s;
+    display: none;
+}
+
+.desktop-link-item-more:hover .submenu-wrapper,
+.desktop-link-item-discover:hover .submenu-wrapper,
+.desktop-link-item-news:hover .submenu-wrapper {
+    transition: opacity .5s cubic-bezier(0.06, 0.81, 0, 0.98) 0s, visibility 0s;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.desktop-link-item-more:hover .desktop-link-item-underline-more,
+.desktop-link-item-discover:hover .desktop-link-item-underline-discover,
+.desktop-link-item-news:hover .desktop-link-item-underline-news {
+    background-color: rgb(0, 160, 186);
+    position: absolute;
+    bottom: 7px;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.submenu-wrapper .submenu-item {
+    padding: 0;
+    line-height: normal;
+    margin: 5px 16px;
+    list-style-type: none;
+}
+
+.submenu-menu li:first-of-type {
+    margin-top: 16px !important;
+}
+
+.submenu-wrapper .submenu-item .submenu-link {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: capitalize;
+    text-align: left;
+    color: #c7c7c7;
+}
+
+
+.desktop-link-item-icon-linkout {
+    vertical-align: middle;
+}
+
+.desktop-link-item-icon-linkout svg {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 4px;
+    text-align: center;
+}
