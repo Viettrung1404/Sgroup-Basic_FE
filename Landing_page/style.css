@@ -305,3 +305,20 @@ body.riotbar-present * {
     margin-left: 4px;
     text-align: center;
 }
+
+
+
+.riotbar-search-input-container {
+    display: none;
+}
+
+.riotbar-search-input-container .riotbar-search-icon
+
+
+
+
+
+/* Mobile */
+.riotbar-mobile-nav-reset {
+    display: none;
+}
