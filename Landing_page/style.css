@@ -24,6 +24,10 @@ body.riotbar-present * {
     scroll-margin-top: 80px;
 }
 
+a:hover {
+    color: rgb(200, 170, 110);
+}
+
 /* Phần Navbar header */
 .margin-top-80px {
     margin-top: 80px;
@@ -307,16 +311,148 @@ body.riotbar-present * {
 }
 
 
-
-.riotbar-search-input-container {
-    display: none;
+.riotbar-right-content {
+    display: flex;
+    padding-right: 32px;
 }
 
-.riotbar-search-input-container .riotbar-search-icon
+.riotbar-search-container {
+    position: relative;
+    font-family: "FF Mark W05", Arial, sans-serif;
+    height: 100%;
+    top: 0;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.riotbar-search-input-container input {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    margin: -8px 10px;
+    border-style: hidden;
+    outline: none;
+    width: 25px;
+    height: 40px;
+    transition: width ease 1s;
+    text-indent: 40px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #f9f9f9;
+}
+
+.riotbar-search-input-container {
+    display: flex;
+    background-color: #2b2a29;
+    transition: background-color .1s ease-in-out;
+    border-radius: 1.6rem;
+    padding: 10px 0;
+}
+
+.riotbar-search-icon {
+    cursor: pointer;
+    position: absolute;
+    transform: translate(26%, 7%);
+    left: 0;
+    transition: translate 1s ease-out;
+}
+
+.riotbar-search-icon svg {
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+}
+
+.riotbar-search-icon svg path {
+    fill: #f9f9f9;
+    transition: fill .3s ease-out;
+}
 
 
+.search-submit {
+    width: 0;
+    border: 0;
+    padding: 0;
+}
+
+.riotbar-search-input-container .search-close {
+    position: absolute;
+    right: 0px;
+    transition: opacity .75s linear;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, -29%);
+    display: block;
+    cursor: pointer;
+}
 
 
+.riotbar-locale-switcher {
+    position: relative;
+    font-family: "FF Mark W05", Arial, sans-serif;
+    height: 100%;
+    top: 0;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.locale-switcher-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.locale-switcher-icon .lang-switch-trigger {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    padding: 0;
+    border-radius: 6.4px;
+    text-decoration: none;
+}
+
+.locale-switcher-icon .lang-switch-trigger svg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+}
+
+
+.riotbar-account-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.riotbar-account-anonymous-link-wrapper {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+.riotbar-anonymous-link {
+    text-align: center;
+    line-height: 16px;
+    position: relative;
+    z-index: 0;
+    text-overflow: ellipsis;
+    height: 32px;
+    border-radius: 12px;
+    padding: 8px 16px;
+    color: #111;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98);
+    vertical-align: middle;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.04px
+}
 
 /* Mobile */
 .riotbar-mobile-nav-reset {
