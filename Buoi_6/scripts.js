@@ -62,10 +62,56 @@ function bt6(arr) {
 let arr = [2, 3, 4, 3]
 bt6(arr)
 
-bt7 
+function bt7(str) {
+    for (i = 0; i < str.length; i++) {
+        if (str[i] === 'j') {
+            if (str[i + 1] === 'a' && str[i + 2] === 'v' && str[i + 3] === 'a') {
+                console.log(true)
+                return true
+            }
+        }
+    }
+    console.log(false)
+    return false
+}
+bt7("aj j java ja")
 
+function bt8(num) {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    if (num < 1 && num > 12) {
+        console.log("Error input")
+    }
+    else {
+        console.log(months[num - 1])
+    }
+}
+bt8(2)
 
+function bt9(str) {
+    let subs = str.split(" ")
+    let index = 0
+    for (i = 1; i < subs.length; i++) {
+        if(subs[i].length > subs[index].length) {
+            index = i
+        }
+    }
+    console.log(subs[index])
+}
+bt9("ahhah hahahha ahhah")
 
-
-
-
+function bt10(left, right) {
+    let isPrime = true
+    for (i = left + 1; i < right; i++) {
+        isPrime = true
+        for (j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+                isPrime = false
+                break
+            }
+        }
+        if (isPrime) {
+            console.log(i)
+        }
+    }
+}
+bt10(20, 50)
