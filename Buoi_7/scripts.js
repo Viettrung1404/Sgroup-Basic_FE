@@ -20,7 +20,7 @@ for (let key in salaries) {
 }
 
 // Bai 4
-function multiplyNumeric(obj) {
+function multiplyNum(obj) {
     for (let key in obj) {
         if (typeof obj[key] == "number") {
             obj[key] *= 2
