@@ -20,7 +20,7 @@ body {
     text-rendering: optimizespeed;
 }
 
-body.riotbar-present * {
+body.bar-present * {
     scroll-margin-top: 80px;
 }
 
@@ -33,7 +33,7 @@ a:hover {
     margin-top: 80px;
 }
 
-.riotbar-wrapper {
+.bar-wrapper {
     position: fixed;
     z-index: 20000;
     top: 0;
@@ -43,7 +43,7 @@ a:hover {
     border: 0;
 }
 
-.riotbar-content {
+.bar-content {
     background-color: #111;
     border-bottom: 2px solid rgba(51, 51, 51, .25);
     font-family: "FF Mark W05", Arial, sans-serif;
@@ -58,36 +58,36 @@ a:hover {
     z-index: 3000000;
 }
 
-.riotbar-left-content {
+.bar-left-content {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 36px;
 }
 
-.riotbar-branding-switcher {
+.bar-branding-switcher {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.riotbar-logo {
+.bar-logo {
     position: relative;
     display: inline-flex;
     align-items: center;
     background-color: transparent;
 }
 
-.riotbar-logo:hover .riotbar-fist-logo{
+.bar-logo:hover .bar-fist-logo{
     fill: #eb0029;
 }
 
-.riotbar-logo:hover .riotbar-app-switcher-trigger-arrow svg5{
+.bar-logo:hover .bar-app-switcher-trigger-arrow svg{
     fill: #eb0029;
 }
 
-.riotbar-fist-logo {
+.bar-fist-logo {
     width: 75px;
     height: 24px;
     fill: #f9f9f9;
@@ -95,13 +95,13 @@ a:hover {
     margin: 0;
 }
 
-.riotbar-app-switcher-trigger-arrow {
+.bar-app-switcher-trigger-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.riotbar-app-switcher-trigger-arrow svg {
+.bar-app-switcher-trigger-arrow svg {
     margin-left: 12px;
     fill: #7e7e7e;
     width: 8px;
@@ -109,14 +109,14 @@ a:hover {
 }
 
 
-.riotbar-center-content {
+.bar-center-content {
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: flex-start;
 }
 
-.riotbar-desktop-logo-outer {
+.bar-desktop-logo-outer {
     height: 80px;
     margin-left: 22px;
     display: flex;
@@ -129,7 +129,7 @@ a:hover {
     position: relative;
 }
 
-.riotbar-desktop-logo-outer a {
+.bar-desktop-logo-outer a {
     min-width: 38px;
     display: block;
 }
@@ -139,7 +139,7 @@ a:hover {
     max-height: 26px;
 }
 
-.riotbar-desktop-navigation-wrapper {
+.bar-desktop-navigation-wrapper {
     opacity: 1;
     margin-left: 18px;
     transition: opacity ease .3s;
@@ -311,12 +311,12 @@ a:hover {
 }
 
 
-.riotbar-right-content {
+.bar-right-content {
     display: flex;
     padding-right: 32px;
 }
 
-.riotbar-search-container {
+.bar-search-container {
     position: relative;
     font-family: "FF Mark W05", Arial, sans-serif;
     height: 100%;
@@ -326,7 +326,7 @@ a:hover {
     align-items: center;
 }
 
-.riotbar-search-input-container input {
+.bar-search-input-container input {
     background-color: rgba(0, 0, 0, 0);
     padding: 0;
     margin: -8px 10px;
@@ -341,7 +341,7 @@ a:hover {
     color: #f9f9f9;
 }
 
-.riotbar-search-input-container {
+.bar-search-input-container {
     display: flex;
     background-color: #2b2a29;
     transition: background-color .1s ease-in-out;
@@ -349,7 +349,7 @@ a:hover {
     padding: 10px 0;
 }
 
-.riotbar-search-icon {
+.bar-search-icon {
     cursor: pointer;
     position: absolute;
     transform: translate(26%, 7%);
@@ -357,13 +357,13 @@ a:hover {
     transition: translate 1s ease-out;
 }
 
-.riotbar-search-icon svg {
+.bar-search-icon svg {
     width: 22px;
     height: 22px;
     pointer-events: none;
 }
 
-.riotbar-search-icon svg path {
+.bar-search-icon svg path {
     fill: #f9f9f9;
     transition: fill .3s ease-out;
 }
@@ -375,7 +375,7 @@ a:hover {
     padding: 0;
 }
 
-.riotbar-search-input-container .search-close {
+.bar-search-input-container .search-close {
     position: absolute;
     right: 0px;
     transition: opacity .75s linear;
@@ -387,7 +387,7 @@ a:hover {
 }
 
 
-.riotbar-locale-switcher {
+.bar-locale-switcher {
     position: relative;
     font-family: "FF Mark W05", Arial, sans-serif;
     height: 100%;
@@ -423,18 +423,18 @@ a:hover {
 }
 
 
-.riotbar-account-container {
+.bar-account-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.riotbar-account-anonymous-link-wrapper {
+.bar-account-anonymous-link-wrapper {
     display: inline-block;
     padding: 0 6px;
 }
 
-.riotbar-anonymous-link {
+.bar-anonymous-link {
     text-align: center;
     line-height: 16px;
     position: relative;
@@ -455,7 +455,110 @@ a:hover {
 }
 
 /* Mobile */
-.riotbar-mobile-nav-reset {
+.bar-mobile-nav-reset {
     display: none;
     color:#111;
+}
+
+
+/* Intro home */
+.intro {
+    min-height: 640px;
+    margin: 0px auto;
+    padding: 64px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.backdrop .backdrop-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.intro .backdrop .backdrop-background-video {
+    opacity: 0.8;
+    background-color: rgb(10, 20, 40);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.intro .blade-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    flex-grow: 1;
+    gap: var(--spacer-variable-m);
+    max-width: 960px;
+    margin: 0px auto;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+}
+
+.intro .top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.intro .logo {
+    object-fit: contain;
+    height: auto;
+    max-width: 368px;
+}
+
+.intro .play-for-free {
+    outline: rgb(255, 255, 255) solid 1px;
+    outline-offset: 3px;
+    margin-top: 48px;
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #0a1428;
+    background-color: #c8aa6e;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.play-for-free .cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
 }
