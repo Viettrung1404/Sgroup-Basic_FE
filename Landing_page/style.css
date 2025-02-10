@@ -31,6 +31,14 @@ body * {
     scroll-margin-top: 80px;
 }
 
+a {
+    text-decoration: none;
+}
+
+ol {
+    list-style: none;
+}
+
 a:hover {
     color: rgb(200, 170, 110);
 }
@@ -1118,4 +1126,555 @@ a:hover {
     font-weight: 600;
     color: rgb(108, 114, 126);
     margin-bottom: 4px;
+}
+
+
+
+
+/* -------------------------------------Slay with style------------------------------ */
+.section-slaywithstyle {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    min-height: 640px;
+    padding: 48px 48px;
+}
+
+
+/* Nền của phần Slay with style */
+.slaywithstyle-backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.slaywithstyle-backdrop .slaywithstyle-backdrop-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+}
+
+.slaywithstyle-backdrop .slaywithstyle-backdrop-background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% center;
+}
+
+
+/* Nội dung của phần Slay with style */
+.slaywithstyle-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    flex-direction: row-reverse;
+}
+
+.slaywithstyle-main .slaywithstyle-content {
+    flex: 0 1 50%;
+    max-width: 50%;
+    min-height: 100%;
+}
+
+.slaywithstyle-content .slaywithstyle-heading .slaywithstyle-supertitle {
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+.slaywithstyle-content .slaywithstyle-heading .slaywithstyle-title {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 88px;
+    margin-bottom: 16px;
+}
+
+.slaywithstyle-content .slaywithstyle-heading .slaywithstyle-description {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: normal;
+    margin-bottom: 48px;
+}
+
+.slaywithstyle-heading .slaywithstyle-description p {
+    margin: 0px;
+}
+
+.slaywithstyle-main .slaywithstyle-content .slaywithstyle-links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.slaywithstyle-content .slaywithstyle-links a {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #0A1428;
+    background-color: #C8AA6E;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+}
+
+.slaywithstyle-content .slaywithstyle-links a:hover {
+    background-color: #d3bb8b;
+}
+
+.slaywithstyle-links a div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.slaywithstyle-main .slaywithstyle-image {
+    flex: 0 1 50%;
+    max-width: 50%;
+    min-height: 100%;
+}
+
+.slaywithstyle-main .slaywithstyle-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* -------------------------------------Mutiples way to play------------------------------ */
+.section-play {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0px auto;
+    background-color: rgb(10, 20, 40);
+    position: relative;
+    padding: 48px 48px;
+    color: rgb(255, 255, 255);
+}
+
+.play-backdrop-main {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.play-backdrop-main .play-backdrop-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+}
+
+.play-backdrop-main .play-backdrop-full-background {
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    z-index: 1;
+}
+
+.play-backdrop-main .play-backdrop-full-background img {
+    object-position: center center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.play-backdrop-main .play-backdrop-full-foreground {
+    position: absolute;
+    display: block;
+    inset: clamp(0px, 20vw, 160px) 0px 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    z-index: 1;
+}
+
+.play-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.play-container .play-main {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.play-container .play-main .play-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.play-main .play-content .play-content-supertitle {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 22px;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.play-main .play-content .play-content-title {
+    margin-bottom: 16px;
+}
+
+.play-content .play-content-title h2 {
+    text-wrap: balance;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 64px;
+    line-height: 72px;
+    color: rgb(255, 255, 255);
+    word-break: normal;
+}
+
+.play-main .play-content .play-content-description {
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 48px;
+}
+
+.play-content .play-content-description p {
+    margin-bottom: 0;
+}
+
+.play-main .play-content .play-content-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.play-content .play-content-links a {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #0A1428;
+    background-color: #C8AA6E;
+}
+
+.play-content .play-content-links a:hover {
+    background-color: #d3bb8b;
+}
+
+.play-content-links a div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.play-container .play-main .play-tabs {
+    z-index: 1;
+    overflow: hidden;
+    cursor: auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    margin-top: -6px;
+    margin-bottom: -2px;
+}
+
+.play-main .play-tabs ol {
+    display: flex;
+    height: 100%;
+    gap: 8px;
+    justify-content: center;
+}
+
+.play-main .play-tabs li {
+    width: calc((100% - 8px * 5) / 6);
+}
+
+.play-main .play-tabs .play-card {
+    display: flex;
+    justify-content: center;
+    transition: transform 300ms;
+    cursor: pointer;
+    flex-direction: column;
+    text-align: center;
+    filter: brightness(50%);
+}
+
+.play-main .play-tabs .play-card.play-card-active {
+    filter: unset;
+}
+
+.play-main .play-tabs .play-card:hover {
+    transform: scale(1.1);
+}
+
+.play-main .play-tabs .play-card.play-card-active:hover {
+    transform: unset;
+}
+
+.play-tabs .play-card .play-card-img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 64px;
+    aspect-ratio: 1 / 1;
+    padding-bottom: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.play-card .play-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-tabs .play-card .play-card-label {
+    font-family: Spiegel, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    word-break: normal;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-top: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.play-container .play-backdrop-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.play-container .play-backdrop-item .play-backdrop-item-foreground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    inset: clamp(0px, 20vw, 160px) 0px 0px;
+    top: 0px;
+}
+
+.play-container .play-media {
+    z-index: 1;
+    flex: 1;
+}
+
+.play-container .play-media .play-media-position {
+    margin-bottom: 48px;
+}
+
+.play-media .play-media-position .play-media-round {
+    padding: 24px;
+    border-radius: 50%;
+    border: 1px solid rgb(200, 170, 110);
+}
+
+.play-media-position .play-media-round .play-media-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding-bottom: 0px;
+    height: auto;
+}
+
+.play-media-position .play-media-round .innerWrapper {
+    position: absolute;
+    inset: 0px;
+}
+
+.play-media-position .play-media-round .play-media-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    clip-path: circle(50%);
+    border: none;
+    max-width: 100%;
+}
+
+.play-container .play-media .play-media-content {
+    text-align: center;
+    position: relative;
+}
+
+.play-media .play-media-content .play-media-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.play-media-content .play-media-header .play-media-title {
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+}
+
+.play-media .play-media-content .play-media-description {
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(255, 255, 255);
+}
+
+.play-media-content .play-media-description p {
+    margin-bottom: 0;
+}
+
+
+
+/* ------------------------------Last section---------------------------- */
+.section-last {
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    color: rgb(10, 20, 40);
+    background-color: rgb(255, 255, 255);
+    padding: 48px 0 48px;
+}
+
+.last-backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.last-backdrop .last-backdrop-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+}
+
+.last-backdrop .last-backdrop-background .last-backdrop-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.last-backdrop .last-backdrop-foreground {
+    display: block;
+    inset: clamp(0px, 20vw, 160px) 0px 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.last-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1280px;
+    min-height: 544px;
+    margin: 0px auto;
+}
+
+.last-main .last-content {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.last-main .last-content a {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #0A1428;
+    background-color: #C8AA6E;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    position: relative;
 }
