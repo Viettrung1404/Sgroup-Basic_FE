@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Spigel';
+    src: url('Spiegel.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0px;
@@ -20,7 +27,7 @@ body {
     text-rendering: optimizespeed;
 }
 
-body.bar-present * {
+body * {
     scroll-margin-top: 80px;
 }
 
@@ -563,4 +570,552 @@ a:hover {
     font-size: 18px;
     line-height: 26px;
     text-transform: uppercase;
+}
+
+
+
+/* -------------------------------------News------------------------------ */
+.section-news {
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 20, 40);
+    padding: 48px 48px;
+}
+
+/* Nền của phần News */
+.news-backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.news-backdrop .news-backdrop-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+}
+
+.news-backdrop .news-backdrop-background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% center;
+}
+
+.news-backdrop .news-backdrop-foreground {
+    display: block;
+    inset: clamp(0px, 20vw, 160px) 0px 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Tiêu đề của phần News */
+.news-heading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.news-heading p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+}
+
+.news-views-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    align-self: center;
+    padding: 0px;
+    color: rgb(10, 20, 40);
+    transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.news-views-all:hover {
+    color: rgb(108, 114, 126);
+}
+
+.news-views-all span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 1 1 0%;
+}
+
+.news-views-all .cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    flex-direction: row-reverse;
+    flex: 1 1 0%;
+    height: 100%;
+}
+
+.news-views-all .icon-link {
+    filter: brightness(0) saturate(100%) invert(69%) sepia(51%) saturate(290%) hue-rotate(2deg) brightness(90%) contrast(93%);
+    transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+    width: 13px;
+    height: 13px;
+}
+
+/* Nội dung của phần News */
+.news-content {
+    margin: 32px 0px;
+    overflow: hidden;
+    cursor: auto;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    gap: 32px;
+    position: relative;
+    z-index: 10;
+}
+
+.news-content .news-card {
+    width: calc((100% - 64px) / 3);
+}
+
+.news-card a{
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.news-card .card-content .card-image {
+    overflow: hidden;
+    aspect-ratio: 1.77778 / 1;
+    padding-bottom: 0px;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.card-image .card-wrapper {
+    position: absolute;
+    inset: 0px;
+}
+
+.card-image .card-wrapper img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+    max-width: 100%;
+}
+
+.news-card:hover .card-image .card-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-image .card-wrapper .icon-action-external-link {
+    background-image: url(./link-square.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: inline-block;
+    mask-repeat: no-repeat;
+    height: 100%;
+    width: clamp(30px, 10%, 100px);
+    background-position: center bottom;
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 16px 0px 8px;
+}
+
+.card-info .card-category {
+    font-weight: bold;
+    color: rgb(200, 170, 110);
+    text-transform: uppercase;
+}
+
+.card-info .card-info-divider {
+    background-color: rgb(204, 204, 204);
+    margin: 0px 8px;
+    height: 13px;
+    width: 1px;
+}
+
+.card-info .card-date {
+    color: rgb(10, 20, 40);
+    font-weight: 500;
+}
+
+.card-content .card-title {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: rgb(10, 20, 40);
+}
+
+.card-content .card-description {
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(10, 20, 40);
+}
+
+
+/* -------------------------------------Champions------------------------------ */
+.section-champions {
+    padding: 48px 48px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0px auto;
+    color: rgb(10, 20, 40);
+}
+
+/* Nền chính của phần Champions */
+.champions-backdrop-main {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.champions-backdrop-main .chammpions-backdrop-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+}
+
+.champions-backdrop-main .chammpions-backdrop-full-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.champions-backdrop-main .chammpions-backdrop-full-background img {
+    object-position: center center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.champions-backdrop-main .chammpions-backdrop-full-foreground {
+    position: absolute;
+    inset: clamp(0px, 20vw, 160px) 0px 0px;
+    top: 0px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Nội dung của phần Champions */
+.champions-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.champions-content .champions-backdrop-item {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.champions-content .champions-backdrop-item .champions-backdrop-foreground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    inset: clamp(0px, 20vw, 160px) 0px 0px;
+    top: 0px;
+}
+
+.champions-content .champions-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.champions-content .champions-main .champions-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.champions-main .champions-text .champions-supertitle {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 22px;
+    line-height: 32px;
+    color: rgb(10, 20, 40);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.champions-main .champions-text .champions-title {
+    margin-bottom: 16px;
+}
+
+.champions-text .champions-title h2 {
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 64px;
+    line-height: 72px;
+    color: rgb(10, 20, 40);
+    word-break: normal;
+}
+
+.champions-main .champions-text .champions-description {
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgb(10, 20, 40);
+    margin-bottom: 48px;
+}
+
+.champions-text .champions-description p {
+    margin-bottom: 0;
+}
+
+.champions-main .champions-text .champions-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.champions-text .champions-buttons a {
+    display: block;
+    width: fit-content;
+    padding: 19px 32px;
+    color: #0a1428;
+    background-color: #c8aa6e;
+    text-transform: uppercase;
+    transition: color 0.25s ease-in-out, background-color 0.3s ease-in-out;
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+}
+
+.champions-text .champions-buttons a:hover {
+    background-color: #d3bb8b;
+}
+
+.champions-text .champions-buttons .bg-59C1DE {
+    background-color: #59C1DE;
+}
+
+.champions-text .champions-buttons .bg-59C1DE:hover {
+    background-color: #7acde4;
+}
+
+.champions-content .champions-main .champions-tabs {
+    z-index: 1;
+}
+
+.champions-main .champions-tabs .champions-roles{
+    overflow: hidden;
+    cursor: auto;
+    width: 100%;
+    height: 100%;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    margin-top: -6px;
+    margin-bottom: -2px;
+}
+
+.champions-tabs .champions-roles ol {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.champions-tabs .champions-roles li {
+    width: calc((100% - 8px * 5) / 6);
+    min-width: calc((100% - 8px * 5) / 6);
+}
+
+.champions-tabs .champions-roles .champions-role-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms;
+    cursor: pointer;
+    flex-direction: column;
+    text-align: center;
+}
+
+.champions-role-item:hover {
+    transform: scale(1.1);
+}
+
+.champions-role-item.champions-role-item-active:hover .champions-role-item-active{
+    transform: scale(1);
+}
+
+.champions-roles .champions-role-item .champions-role-item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    padding-bottom: 0px;
+    height: auto;
+    width: 100%;
+    max-width: 64px;
+}
+
+.champions-role-item .champions-role-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.champions-roles .champions-role-item .champions-role-item-label {
+    font-family: Spiegel, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    word-break: normal;
+    font-weight: 600;
+    color: rgb(10, 20, 40);
+    margin-top: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.champions-controller {
+    display: none;
+}
+
+.champions-content .champions-media {
+    flex: 1;
+    z-index: 1;
+}
+
+.champions-content .champions-media .champions-media-img {
+    margin-bottom: 48px;
+    aspect-ratio: 1 / 1;
+    padding-bottom: 0px;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.champions-media .champions-media-img .champions-media-wrapper {
+    position: absolute;
+    inset: 0px;
+}
+
+.champions-media-img .champions-media-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.champions-content .champions-media .champions-media-content {
+    text-align: center;
+    position: relative;
+}
+
+.champions-media .champions-media-content .champions-media-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgb(10, 20, 40);
+}
+
+.champions-media .champions-media-content .champions-media-subtitle {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: rgb(108, 114, 126);
+    margin-bottom: 4px;
 }
