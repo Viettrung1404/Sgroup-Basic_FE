@@ -712,85 +712,6 @@ a:hover {
 
 }
 
-@media screen and (max-width: 1024px) {
-    .bar-mobile-nav {
-        display: block;
-        height: fit-content;
-    }
-    .bar-theme-logo-mobile {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: auto;
-        line-height: 80px;
-        height: 80px;
-    }
-
-    .bar-center-content {
-        margin-left: 28px;
-    }
-
-    .bar-desktop-navigation-wrapper {
-        margin-left: 0;
-    }
-
-    .desktop-link-item, .bar-desktop-logo-outer, .bar-search-container, .bar-account-container {
-        display: none;
-    }
-
-    .bar-left-content {
-        padding-left: 16px;
-    }
-
-    .bar-fist-logo {
-        height: 32px;
-        width: 95px;
-    }
-
-    .bar-fist-logo svg {
-        height: 32px;
-        width: 100%;
-    }
-
-    .bar-app-switcher-trigger-arrow svg{
-        width: 14px;
-        height: 7px;
-    }
-
-    .locale-switcher-icon {
-        width: 48px;
-        height: 48px;
-        margin: 0 12px 0 8px;
-    }
-
-    .locale-switcher-icon .lang-switch-trigger {
-        width: 48px;
-        height: 48px;
-    }
-
-    .locale-switcher-icon .lang-switch-trigger svg {
-        top: 12px;
-        left: 12px;
-        width: 24px;
-        height: 24px;
-    }
-
-    .bar-menu-icon {
-        display: block;
-        visibility: visible;
-        height: 48px;
-        width: 48px;
-        cursor: pointer;
-    }
-
-    .bar-right-content {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding-right: 16px;
-    }
-}
-
 /* Intro home */
 .intro {
     min-height: 640px;
@@ -2206,4 +2127,130 @@ a:hover {
 
 .none {
     display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .bar-mobile-nav {
+        display: block;
+        height: fit-content;
+    }
+    .bar-theme-logo-mobile {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        line-height: 80px;
+        height: 80px;
+    }
+
+    .bar-center-content {
+        margin-left: 28px;
+    }
+
+    .bar-desktop-navigation-wrapper {
+        margin-left: 0;
+    }
+
+    .desktop-link-item, .bar-desktop-logo-outer, .bar-search-container, .bar-account-container {
+        display: none;
+    }
+
+    .bar-left-content {
+        padding-left: 16px;
+    }
+
+    .bar-fist-logo {
+        height: 32px;
+        width: 95px;
+    }
+
+    .bar-fist-logo svg {
+        height: 32px;
+        width: 100%;
+    }
+
+    .bar-app-switcher-trigger-arrow svg{
+        width: 14px;
+        height: 7px;
+    }
+
+    .locale-switcher-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 12px 0 8px;
+    }
+
+    .locale-switcher-icon .lang-switch-trigger {
+        width: 48px;
+        height: 48px;
+    }
+
+    .locale-switcher-icon .lang-switch-trigger svg {
+        top: 12px;
+        left: 12px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .bar-menu-icon {
+        display: block;
+        visibility: visible;
+        height: 48px;
+        width: 48px;
+        cursor: pointer;
+    }
+
+    .bar-right-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 16px;
+    }
+
+    .champions-content {
+        flex-direction: column;
+    }
+
+    .champions-main .champions-text .champions-supertitle {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .champions-text .champions-title h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .champions-main .champions-text .champions-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .champions-text .champions-buttons a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .champions-tabs .champions-roles ol {
+        justify-content: flex-start;
+    }
+
+    .champions-tabs .champions-roles li {
+        width: calc((100% - 8px* 3) / 4);
+        min-width: calc((100% - 8px* 3) / 4);
+    }
+
+    .champions-content .champions-media {
+        min-width: 100%;
+    }
+
+    .champions-media .champions-media-content .champions-media-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .champions-media .champions-media-content .champions-media-subtitle {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
