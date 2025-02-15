@@ -31,7 +31,6 @@ a {
 .section-search {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
     max-width: 500px;
     width: 100%;
     margin: 0 auto 50px;
@@ -42,10 +41,9 @@ a {
     width: 100%;
     padding: 20px;
     box-shadow: #64646f33 0 7px 29px;
-    transition: all .2s ease;
-    border: none;
+    transition: all 0.4s;
+    border: 1px solid #00000036;
     border-radius: 30px;
-    outline: 1px solid #00000036;
 }
 
 .section-list {
@@ -57,15 +55,14 @@ a {
 .section-list .list-item {
     display: flex;
     flex-direction: column;
-    max-width: calc(var(--width) - calc(var(--offset)));
-    flex-basis: calc(var(--width) - calc(var(--offset)));
-    margin: 0 calc(var(--offset) / 2);
-    margin-bottom: var(--offset);
+    max-width: calc(var(--width) - 10px);
+    flex-basis: calc(var(--width) - 10px);
+    margin: 0 calc(10px / 2);
+    margin-bottom: 10px;
     border-radius: 15px;
     box-shadow: #0000001a 0 4px 12px;
-    transition: box-shadow .4s ease-out;
+    transition: box-shadow 0.4s ease-out;
     --width: 16.66%;
-    --offset: 10px;
 }
 
 .list-item:hover {
@@ -126,7 +123,7 @@ a {
     border: none;
     border-radius: 10px;
     padding: 20px 25px;
-    transition: all .25s cubic-bezier(.02,.01,.47,1);
+    transition: all .25s cubic-bezier(0.02,0.01,0.47,1);
 }
 
 
@@ -209,4 +206,22 @@ a {
 
 .shadow {
     background-color: #735797
+}
+
+@media (max-width: 1200px) {
+    .section-list .list-item {
+        --width: 25%;
+    }
+}
+
+@media (max-width: 960px) {
+    .section-list .list-item {
+        --width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-list .list-item {
+        --width: 50%;
+    }
 }
