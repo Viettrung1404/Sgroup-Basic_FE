@@ -2204,3 +2204,6 @@ a:hover {
     max-width: 100%;
 }
 
+.none {
+    display: none;
+}

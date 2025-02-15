@@ -31,7 +31,6 @@ function checkScreenSize() {
     } else {
         // Nếu màn hình to hơn 1500px, xóa phần tử để tránh trùng lặp
         const merchItem = document.querySelector('.submenu-item.merch');
-        console.log(merchItem);
         if (merchItem) {
             merchItem.remove();
             const addContainer = document.querySelector(`.desktop-link-item-merch`);
@@ -150,11 +149,14 @@ document.querySelectorAll('.play-card').forEach(card => {
 const mobileNav = document.querySelector('.bar-mobile-nav');
 const mobileMenu = document.querySelector('.bar-mobile-menu');
 const mobileClose = document.querySelector('.mobile-menu-close');
+const mobileIcon = document.querySelector('.bar-menu-icon');
 
-mobileNav.addEventListener('click', function() {
+mobileIcon.addEventListener('click', function() {
     mobileMenu.classList.add('bar-mobile-menu-active');
+    mobileIcon.classList.add('none');
 });
 
 mobileClose.addEventListener('click', function() {
     mobileMenu.classList.remove('bar-mobile-menu-active');
+    mobileIcon.classList.remove('none');
 });
