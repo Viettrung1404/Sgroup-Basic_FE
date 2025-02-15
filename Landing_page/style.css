@@ -169,6 +169,10 @@ a:hover {
     cursor: pointer;
 }
 
+#desktop-link-item-none {
+    display: none !important;
+}
+
 .desktop-link-item a, 
 .desktop-link-item .news, 
 .desktop-link-item .discover,
@@ -293,8 +297,17 @@ a:hover {
     list-style-type: none;
 }
 
-.submenu-menu li:first-of-type {
+.submenu-wrapper .submenu-item:hover {
+    background-color: rgba(128, 128, 128, .3);
+    border-radius: 6.4px;
+}
+
+.submenu-wrapper li:first-of-type.submenu-item {
     margin-top: 16px !important;
+}
+
+.submenu-wrapper li:last-child.submenu-item {
+    margin-bottom: 16px !important;
 }
 
 .submenu-wrapper .submenu-item .submenu-link {
@@ -1053,6 +1066,10 @@ a:hover {
     height: 100%;
     object-fit: cover;
     filter: brightness(50%);
+}
+
+.champions-role-item.champions-role-item-active .champions-role-item-img img {
+    filter: unset;
 }
 
 .champions-roles .champions-role-item .champions-role-item-label {
