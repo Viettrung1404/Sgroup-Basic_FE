@@ -144,3 +144,17 @@ document.querySelectorAll('.play-card').forEach(card => {
         videoContainer.play();
     });
 });
+
+
+// Js for Mobile navigation
+const mobileNav = document.querySelector('.bar-mobile-nav');
+const mobileMenu = document.querySelector('.bar-mobile-menu');
+const mobileClose = document.querySelector('.mobile-menu-close');
+
+mobileNav.addEventListener('click', function() {
+    mobileMenu.classList.add('bar-mobile-menu-active');
+});
+
+mobileClose.addEventListener('click', function() {
+    mobileMenu.classList.remove('bar-mobile-menu-active');
+});
