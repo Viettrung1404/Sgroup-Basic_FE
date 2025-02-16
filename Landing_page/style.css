@@ -971,7 +971,6 @@ a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-    border: none;
     max-width: 100%;
 }
 
@@ -987,18 +986,9 @@ a:hover {
     bottom: 0px;
     right: 0px;
     display: inline-block;
-    mask-repeat: no-repeat;
     height: 100%;
     width: clamp(30px, 10%, 100px);
     background-position: center bottom;
-    text-wrap: balance;
-    word-break: break-word;
-    font-family: "Beaufort for LOL", sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 24px;
 }
 
 .card-info {
