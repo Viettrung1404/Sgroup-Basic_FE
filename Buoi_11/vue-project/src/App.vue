@@ -848,25 +848,89 @@ ul {
   border: none;
 } 
 
-.meta h1 {
+.heading h1 {
   text-align: left;
   line-height: 1.2;
   font-weight: 700;
   word-wrap: break-word;
   word-break: break-word;
   font-size: 2.5rem;
+  margin-top: 25px;
 }
 
 .middle {
-  
+  font-size: 18px;
+  flex: 1 1 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  overflow: hidden;
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.middle h3 {
+  font-size: 1.45em;
+  margin: 1.5em 0 .6em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.middle p {
+  margin-top: .5em;
+  margin-bottom: 0;
+  font-size: 1em;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-weight: 400;
+  letter-spacing: -.003em;
 }
 
 .code {
-
+  position: relative;
 }
 
-.pre {
+.code pre {
+  display: block;
+  color: #24292e;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.45;
+  tab-size: 4;
+  padding: 1em;
+  overflow: auto;
+  border-radius: 3px;
+  margin: 1em 0;
+  background-color: #f1f2f3;
+  border: 1px solid #e5e5e5;
+  font-size: 15px;
+}
 
+.code code {
+  display: block;
+  color: #24292e;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.45;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.code button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background-color: #f1f2f3;
+  border: none;
+  cursor: pointer;
 }
 
 .index {
