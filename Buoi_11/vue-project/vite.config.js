@@ -6,7 +6,6 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Basic_FE/Buoi_11/vue-project/',
   plugins: [
     vue(),
     vueDevTools(),

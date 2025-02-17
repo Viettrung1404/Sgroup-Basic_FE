@@ -1,9 +1,24 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted } from 'vue';
 
-let count = ref(0)
+let count = ref(0);
+
+let vote = computed(() => {
+  if (count.value > 1) {
+    count.value = 1;
+    return count.value;
+  } 
+  else if (count.value < 0) {
+    count.value = 0;
+    return count.value;
+  } 
+  else {
+    return count.value;
+  }
+});
 
 </script>
+
 
 <template>
   <div class="header">
@@ -82,11 +97,11 @@ let count = ref(0)
       <div class="content">
         <div class="left_sidebar d-flex flex-column align-items-center">
           <div class="vote">
-            <button class="icon-btn upvote">
+            <button @click="count++" class="icon-btn upvote" ref="upvote">
               <i aria-hidden="true" class="fa fa-caret-up"></i>
             </button> 
-            <div class="points text-muted">{{ count }}</div> 
-            <button class="icon-btn downvote">
+            <div class="points text-muted">{{ vote }}</div> 
+            <button @click="count--" class="icon-btn downvote" ref="downvote">
               <i aria-hidden="true" class="fa fa-caret-down"></i>
             </button>
           </div> 
@@ -104,10 +119,10 @@ let count = ref(0)
           </div>
 
           <div class="social">
-            <a tooltip-placement="right" rel="noopener" class="link link--muted link--muted" data-original-title="Chia sẻ liên kết đến trang này trên Facebook">
+            <a tooltip-placement="right" rel="noopener" class="link link--muted" data-original-title="Chia sẻ liên kết đến trang này trên Facebook">
               <i aria-hidden="true" class="fa fa-facebook"></i>
             </a> 
-            <a tooltip-placement="right" rel="noopener" class="link link--muted link--muted" data-tippy="" data-original-title="Chia sẻ liên kết đến trang này trên Twitter">
+            <a tooltip-placement="right" rel="noopener" class="link link--muted mg-0.5rem" data-tippy="" data-original-title="Chia sẻ liên kết đến trang này trên Twitter">
               <i aria-hidden="true" class="fa fa-twitter"></i>
             </a>
           </div>
@@ -123,8 +138,8 @@ let count = ref(0)
                   </a>
                 </div>
                 <div class="author_info">
-                  <div class="d-flex">
-                    <div class="author_name">
+                  <div class="d-flex ">
+                    <div class="author_name .mg-0\.5rem">
                       <a href="/u/Thanh_Tung">Huỳnh Thanh Tùng</a> 
                       <span >@Thanh_Tung</span>
                     </div> 
@@ -561,7 +576,7 @@ ul {
 .position-relative {
   position: relative;
 }
-.flex-col {
+.flex-column {
   flex-direction: column;
 }
 .justify-content-center {
@@ -572,10 +587,6 @@ ul {
   align-items: center;
 }
 
-.avatar {
-
-} 
-
 .flex-center {
   display: flex;
   justify-content: center;
@@ -583,83 +594,168 @@ ul {
 }
 
 .vote {
-
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .icon-btn {
-  
+  line-height: 1;
+  color: #9b9b9b;
+  outline: none;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 35px;
 }
 
-.upvote {
-
-}
-
-.downvote {
-
+.icon-btn:hover {
+  color: #0b1a33;
 }
 
 .points {
-
+  font-size: .6em;
+  height: .6em;
+  line-height: .6em;
+  color: #9b9b9b;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: default;
 }
 
 .text-muted {
-
+  color: #9b9b9b !important;
 }
 
 .subscribe {
+  margin-bottom: 1.5rem
+}
 
+.subscribe button {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  padding: 10px;
+  color: #adb5bd;
+  border: 2px solid #adb5bd;
+  border-radius: 50%;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, .2);
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
 }
 
 .a {
-
+  margin-bottom: 1.5rem;
 }
 
 .a button {
-
+  color: #adb5bd;
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  text-align: center;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
 }
 
 .social {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 1.5rem;
 }
 
-.link {
+.social .link {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #dbe3e8;
+}
 
+.mg-0\.5rem {
+  margin: 0.5rem;
+}
+
+.social .link:hover {
+  fillter: brightness(1.2);
 }
 
 .link--muted {
-
+  color: #9b9b9b !important;
 }
 
 .main_content {
-
+  max-width: 760px;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 700px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .heading {
-
+  margin-bottom: .5rem;
 }
 
 .meta {
-
+  margin-bottom: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .meta_left {
-
+  display: flex;
+  align-items: center;
 }
 
 .author {
-
+  margin-right: .5rem;
+  position: relative !important;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .author img {
-
+  width: 45px;
+  max-height: 45px;
+  display: block;
+  height: auto;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .author_info {
-
+  line-height: 24px;
+  margin-right: 1rem;
 }
 
 .d-flex {
-
+  display: flex
 }
 
 .author_name {
@@ -729,8 +825,6 @@ ul {
 .sticky_sidebar {
 
 }
-
-
 
 
 </style>
