@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+
+let count = ref(0)
+
 </script>
 
 <template>
@@ -73,226 +76,225 @@ import { ref } from 'vue'
 
   <main>
     <div class="container">
-      <div class="left_sidebar">
-        <div class="d-flex position-relative flex-col justify-content-center align-items-center el-popover__reference">
-          <a href="/u/Thanh_Tung" class="position-relative d-flex position-relative flex-col justify-content-center align-items-center">
-            <img src="https://images.viblo.asia/avatar/8853cc3b-e6a0-4bab-9c60-2932d829a639.jpg" srcset="https://images.viblo.asia/avatar-retina/8853cc3b-e6a0-4bab-9c60-2932d829a639.jpg 2x" alt="Avatar" class="avatar avatar--lg level-default avatar-event flex-center">
-          </a>
-        </div>
-
-        <div class="votes votes--side post-actions__vote mb-1">
-          <button class="icon-btn vote" data-original-title="Upvote">
-            <i aria-hidden="true" class="fa fa-caret-up"></i>
-          </button> 
-          <div class="points text-muted">+2</div> 
-          <button class="icon-btn vote" data-original-title="Downvote">
-            <i aria-hidden="true" class="fa fa-caret-down"></i>
-          </button>
-        </div> 
-        
-        <div class="subscribe mb-2">
-          <button type="button" class="">
-            <i class="fa fa-bookmark"></i>
-          </button>
-        </div>
-
-        <div class="class">
-          <button type="button" class="el-button is-circle type-control el-button--default el-popover__reference" data-v-5dedd11a="" aria-describedby="el-popover-409" tabindex="0">
-            <i class="fa fa-font" data-v-5dedd11a=""></i>
-          </button>
-        </div>
-
-        <div class="social-sharing mb-2 social-sharing--horizontal social-sharing--small" data-v-235dd1c0="">
-          <a tooltip-placement="right" rel="noopener" class="link link--muted link--muted" data-v-235dd1c0="" data-original-title="Chia sẻ liên kết đến trang này trên Facebook">
-            <i aria-hidden="true" class="fa fa-facebook" data-v-235dd1c0=""></i>
-          </a> 
-          <a tooltip-placement="right" rel="noopener" class="link link--muted link--muted" data-v-235dd1c0="" data-tippy="" data-original-title="Chia sẻ liên kết đến trang này trên Twitter">
-            <i aria-hidden="true" class="fa fa-twitter" data-v-235dd1c0=""></i>
-          </a>
-        </div>
+      <div class="banner">
+        <img src="https://images.viblo.asia/full/6e63fe2b-f602-4ac7-959f-353993b9fb81.png" width="1140" height="168" alt="" class="progressive-img_full">
       </div>
+      <div class="content">
+        <div class="left_sidebar d-flex flex-column align-items-center">
+          <div class="vote">
+            <button class="icon-btn upvote">
+              <i aria-hidden="true" class="fa fa-caret-up"></i>
+            </button> 
+            <div class="points text-muted">{{ count }}</div> 
+            <button class="icon-btn downvote">
+              <i aria-hidden="true" class="fa fa-caret-down"></i>
+            </button>
+          </div> 
+          
+          <div class="subscribe">
+            <button type="button" class="">
+              <i class="fa fa-bookmark"></i>
+            </button>
+          </div>
 
-      <div class="main_content">
-        <div class="heading">
-          <div class="meta">
-            <div class="meta_left">
-              <div class="author">
-                <a href="/u/Thanh_Tung">
-                  <img src="https://images.viblo.asia/avatar/8853cc3b-e6a0-4bab-9c60-2932d829a639.jpg" srcset="https://images.viblo.asia/avatar-retina/8853cc3b-e6a0-4bab-9c60-2932d829a639.jpg 2x" alt="Avatar"> 
-                </a>
-              </div>
-              <div class="author_info">
-                <div class="d-flex">
-                  <div class="author_name">
-                    <a href="/u/Thanh_Tung">Huỳnh Thanh Tùng</a> 
-                    <span >@Thanh_Tung</span>
+          <div class="a">
+            <button type="button">
+              <i class="fa fa-font"></i>
+            </button>
+          </div>
+
+          <div class="social">
+            <a tooltip-placement="right" rel="noopener" class="link link--muted link--muted" data-original-title="Chia sẻ liên kết đến trang này trên Facebook">
+              <i aria-hidden="true" class="fa fa-facebook"></i>
+            </a> 
+            <a tooltip-placement="right" rel="noopener" class="link link--muted link--muted" data-tippy="" data-original-title="Chia sẻ liên kết đến trang này trên Twitter">
+              <i aria-hidden="true" class="fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="main_content">
+          <div class="heading">
+            <div class="meta">
+              <div class="meta_left">
+                <div class="author">
+                  <a href="/u/Thanh_Tung">
+                    <img src="https://images.viblo.asia/avatar/8853cc3b-e6a0-4bab-9c60-2932d829a639.jpg" srcset="https://images.viblo.asia/avatar-retina/8853cc3b-e6a0-4bab-9c60-2932d829a639.jpg 2x" alt="Avatar"> 
+                  </a>
+                </div>
+                <div class="author_info">
+                  <div class="d-flex">
+                    <div class="author_name">
+                      <a href="/u/Thanh_Tung">Huỳnh Thanh Tùng</a> 
+                      <span >@Thanh_Tung</span>
+                    </div> 
+                    <div class="subscribe">
+                      <button type="button">
+                        <span>Theo dõi</span>
+                      </button>
+                    </div>
                   </div> 
-                  <div class="subscribe">
+                  <div class="stats">
+                    <span class="stats_item">
+                      <i aria-hidden="true" class="stats_icon fa fa-star"></i>
+                      363
+                    </span>
+                    <span class="stats_item">
+                      <i aria-hidden="true" class="stats_icon fa fa-user-plus"></i>
+                      8
+                    </span>
+                    <span class="stats_item">
+                      <i aria-hidden="true" class="stats_icon fa fa-pencil"></i>
+                      29
+                    </span> 
+                  </div>
+                </div>
+              </div>
+              <div class="meta_right">
+                <div title="Dec 23rd, 2019 1:22 p.m." class="text-muted">
+                  Đã đăng vào thg 12 23, 2019 8:22 CH
+                  <span title="4 phút đọc" class="post-reading_time is-divide is-divide--fit text-muted">4 phút đọc</span>
+                </div> 
+                <div class="d-flex align-items-center">
+                  <div class="meta_nav_item mr-1 text-muted" data-tippy="" data-original-title="Lượt xem: 11197">
+                    <i aria-hidden="true" class="el-icon-view post-meta__icon"></i> 
+                    <span>11.1K</span>
+                  </div> 
+                  <div class="meta_nav_item mr-1 text-muted" data-tippy="" data-original-title="Di chuyển đến bình luận">
                     <button type="button">
-                      <span>Theo dõi</span>
+                      <i class="fa fa-comments-o post-meta__icon"></i>
+                      <span>0</span>
+                    </button>
+                  </div> 
+                  <div class="meta_nav_item text-muted" data-tippy="" data-original-title="Xem danh sách người bookmark">
+                    <button type="button">
+                      <i class="fa fa-bookmark post-meta__icon"></i>
+                      <span>1</span>
                     </button>
                   </div>
-                </div> 
-                <div class="stats">
-                  <span class="stats_item">
-                    <i aria-hidden="true" class="stats_icon fa fa-star"></i>
-                    363
-                  </span>
-                  <span class="stats_item">
-                    <i aria-hidden="true" class="stats_icon fa fa-user-plus"></i>
-                    8
-                  </span>
-                  <span class="stats_item">
-                    <i aria-hidden="true" class="stats_icon fa fa-pencil"></i>
-                    29
-                  </span> 
                 </div>
               </div>
             </div>
-            <div class="meta_right">
-              <div title="Dec 23rd, 2019 1:22 p.m." class="text-muted">
-                Đã đăng vào thg 12 23, 2019 8:22 CH
-                <span title="4 phút đọc" class="post-reading_time is-divide is-divide--fit text-muted">4 phút đọc</span>
-              </div> 
-              <div class="d-flex align-items-center">
-                <div class="meta_nav_item mr-1 text-muted" data-tippy="" data-original-title="Lượt xem: 11197">
-                  <i aria-hidden="true" class="el-icon-view post-meta__icon"></i> 
-                  <span>11.1K</span>
-                </div> 
-                <div class="meta_nav_item mr-1 text-muted" data-tippy="" data-original-title="Di chuyển đến bình luận">
-                  <button type="button">
-                    <i class="fa fa-comments-o post-meta__icon"></i>
-                    <span>0</span>
-                  </button>
-                </div> 
-                <div class="meta_nav_item text-muted" data-tippy="" data-original-title="Xem danh sách người bookmark">
-                  <button type="button">
-                    <i class="fa fa-bookmark post-meta__icon"></i>
-                    <span>1</span>
-                  </button>
-                </div>
-              </div>
+            <h1>
+              Những chú ý khi sử dụng v-model trong vue js
+            </h1>
+          </div>
+          <div class="middle">
+            <h3 id="mo_dau">Mở đầu</h3>
+            <p>v-model là chức năng được sử dụng rất nhiều khi tạo form sử dụng Vue.js. Bạn có thể sử dụng v-model để tạo ra các ràng buộc dữ liệu hai chiều trên các ô input hoặc textarea hay thậm chí là file. Nó sẽ tự động chọn đúng cách để cập nhật các phần tử dựa trên kiểu nhập. Mặc dù khi sử dụng bạn sẽ thấy có đôi chút magic, nhưng v-model thực sự là một cú pháp không thể thiếu mỗi khi bạn muốn handle một form một cách thuận tiện và ngon lành 😄 Note: v-model sẽ bỏ qua các giá trị ban đầu, "checked" hoặc "selected" attribute được tìm thấy trên bất kì form elements nào. Nó sẽ luôn luôn xử lý các dữ liệu của Vue instance như là những dữ liệu luôn đúng. Bạn nên khai báo giá trị ban đầu ở phía Javascript bên trong các component.</p>
+            <h3 id="hoat_dong_cua_v-model">Hoạt động của v-model</h3>
+            <p>v-model là một syntax sugar (cú pháp ngọt - dễ nhìn) để viết v-on và v-bind với nhau trong một dòng. Tổng quan, hai dòng sau thực hiện cùng một hoạt động:</p>
+            <div class="code">
+              <pre>
+                <code>
+                  &lt;input v-model="searchText"&gt;
+                  &lt;input :value="searchText" @change="searchText = $event.target.value"&gt;
+                </code>
+              </pre>
+              <button title="Sao chép">
+                <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
+                <span class="v-markdown-icon el-icon-document-copy"></span>
+              </button>
             </div>
-          </div>
-          <h1>
-            Những chú ý khi sử dụng v-model trong vue js
-          </h1>
-        </div>
-        <div class="middle">
-          <h3 id="mo_dau">Mở đầu</h3>
-          <p>v-model là chức năng được sử dụng rất nhiều khi tạo form sử dụng Vue.js. Bạn có thể sử dụng v-model để tạo ra các ràng buộc dữ liệu hai chiều trên các ô input hoặc textarea hay thậm chí là file. Nó sẽ tự động chọn đúng cách để cập nhật các phần tử dựa trên kiểu nhập. Mặc dù khi sử dụng bạn sẽ thấy có đôi chút magic, nhưng v-model thực sự là một cú pháp không thể thiếu mỗi khi bạn muốn handle một form một cách thuận tiện và ngon lành 😄 Note: v-model sẽ bỏ qua các giá trị ban đầu, "checked" hoặc "selected" attribute được tìm thấy trên bất kì form elements nào. Nó sẽ luôn luôn xử lý các dữ liệu của Vue instance như là những dữ liệu luôn đúng. Bạn nên khai báo giá trị ban đầu ở phía Javascript bên trong các component.</p>
-          <h3 id="hoat_dong_cua_v-model">Hoạt động của v-model</h3>
-          <p>v-model là một syntax sugar (cú pháp ngọt - dễ nhìn) để viết v-on và v-bind với nhau trong một dòng. Tổng quan, hai dòng sau thực hiện cùng một hoạt động:</p>
-          <div class="code">
-            <pre>
-              <code>
-                &lt;input v-model="searchText"&gt;
-                &lt;input :value="searchText" @change="searchText = $event.target.value"&gt;
-              </code>
-            </pre>
-            <button title="Sao chép">
-              <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
-              <span class="v-markdown-icon el-icon-document-copy"></span>
-            </button>
-          </div>
-          <p>Thành phần tùy chỉnh của v-model Trường hợp sử dụng v-model đối với thành phần tùy chỉnh, mặc định thì props được gọi là value và sự kiện của input được sử dụng. Value này có thể thay đổi được bằng định nghĩa ở phía thành phần tùy chỉnh.</p>
-          <p>Ví dụng sau được trích từ trang tài liệu tham khảo chính thức:</p>
-          <div class="code">
-            <pre>
-              <code>
-                Vue.component('my-checkbox', {
-                  model: {
-                    prop: 'checked',
-                    event: 'change'
-                  },
-                  props: {
-                    // Tùy theo điều này,  cho phép sử dụng thuộc tính `value` với mục đích riêng biệt.
-                    value: String,
-                    // `checked` sẽ được sử dụng như thuộc tính thay thế `value`
-                    checked: {
-                      type: Number,
-                      default: 0
-                    }
-                  },
-                  // ...
-                })
-              </code>
-            </pre>
-            <button title="Sao chép">
-              <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
-              <span class="v-markdown-icon el-icon-document-copy"></span>
-            </button>
-          </div>
-          <h3 id="_nhung-loi-thuong-gap-2">Những lỗi thường gặp</h3>
-          <p>Viết cả v-model và <a href="https://viblo.asia/u/change" target="_blank">@change</a> V-model như đã nói ở trên là Event handling (xử lý sự kiện). Nên việc kết hợp viết hai lần sử dụng v-model và <a href="https://viblo.asia/u/change" target="_blank">@change</a> là không cần thiết, và làm cho code trở nên Not Syntax Suger. Ví dụ như đoạn mã ở dưới.</p>
-          <p>// Đoạn code lỗi</p>
-          <div class="code">
-            <pre>
-              <code class="language-none">
-                &lt;input v-model="searchText" @change="(value) =&gt; searchText = value"&gt;
-              </code>
-            </pre>
-            <button title="Sao chép">
-              <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
-              <span class="v-markdown-icon el-icon-document-copy"></span>
-            </button>
-          </div>
-          <p>Do bản thân v-model đã có sẵn Event handling (xử lý sự kiện) của sự kiện <a href="https://viblo.asia/u/change" target="_blank">@change</a>, nên sự kiện đối với change bị lặp lại hai lần. Nếu trường hợp muốn xử lý nhiều sự kiện hơn một sự kiện change, chúng ta nên dùng việc sử dụng v-model và thay thế vào đó là sử dụng đồng thời v-bind và v-on hoặc sử dụng thuộc tính thay thế searchText.</p>
-          <p>// Đoạn code chuẩn Syntax Suger</p>
-          <div class="code">
-            <pre>
-              <code class="language-none">
-                &lt;input v-model=&quot;searchText&quot;&gt;
-                &lt;script&gt;
-                data(){
-                  return {
-                    innerSearchText: ''
-                  }
-                },
-                computed: {
-                  searchText: {
-                    get () {
-                      return this.innerSearchText
+            <p>Thành phần tùy chỉnh của v-model Trường hợp sử dụng v-model đối với thành phần tùy chỉnh, mặc định thì props được gọi là value và sự kiện của input được sử dụng. Value này có thể thay đổi được bằng định nghĩa ở phía thành phần tùy chỉnh.</p>
+            <p>Ví dụng sau được trích từ trang tài liệu tham khảo chính thức:</p>
+            <div class="code">
+              <pre>
+                <code>
+                  Vue.component('my-checkbox', {
+                    model: {
+                      prop: 'checked',
+                      event: 'change'
                     },
-                    set (value) {
-                      this.innerSearchText = value
+                    props: {
+                      // Tùy theo điều này,  cho phép sử dụng thuộc tính `value` với mục đích riêng biệt.
+                      value: String,
+                      // `checked` sẽ được sử dụng như thuộc tính thay thế `value`
+                      checked: {
+                        type: Number,
+                        default: 0
+                      }
+                    },
+                    // ...
+                  })
+                </code>
+              </pre>
+              <button title="Sao chép">
+                <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
+                <span class="v-markdown-icon el-icon-document-copy"></span>
+              </button>
+            </div>
+            <h3 id="_nhung-loi-thuong-gap-2">Những lỗi thường gặp</h3>
+            <p>Viết cả v-model và <a href="https://viblo.asia/u/change" target="_blank">@change</a> V-model như đã nói ở trên là Event handling (xử lý sự kiện). Nên việc kết hợp viết hai lần sử dụng v-model và <a href="https://viblo.asia/u/change" target="_blank">@change</a> là không cần thiết, và làm cho code trở nên Not Syntax Suger. Ví dụ như đoạn mã ở dưới.</p>
+            <p>// Đoạn code lỗi</p>
+            <div class="code">
+              <pre>
+                <code class="language-none">
+                  &lt;input v-model="searchText" @change="(value) =&gt; searchText = value"&gt;
+                </code>
+              </pre>
+              <button title="Sao chép">
+                <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
+                <span class="v-markdown-icon el-icon-document-copy"></span>
+              </button>
+            </div>
+            <p>Do bản thân v-model đã có sẵn Event handling (xử lý sự kiện) của sự kiện <a href="https://viblo.asia/u/change" target="_blank">@change</a>, nên sự kiện đối với change bị lặp lại hai lần. Nếu trường hợp muốn xử lý nhiều sự kiện hơn một sự kiện change, chúng ta nên dùng việc sử dụng v-model và thay thế vào đó là sử dụng đồng thời v-bind và v-on hoặc sử dụng thuộc tính thay thế searchText.</p>
+            <p>// Đoạn code chuẩn Syntax Suger</p>
+            <div class="code">
+              <pre>
+                <code class="language-none">
+                  &lt;input v-model=&quot;searchText&quot;&gt;
+                  &lt;script&gt;
+                  data(){
+                    return {
+                      innerSearchText: ''
+                    }
+                  },
+                  computed: {
+                    searchText: {
+                      get () {
+                        return this.innerSearchText
+                      },
+                      set (value) {
+                        this.innerSearchText = value
+                      }
                     }
                   }
-                }
-                &lt;/script&gt;
-              </code>
-            </pre>
-            <button title="Sao chép">
-              <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
-              <span class="v-markdown-icon el-icon-document-copy"></span>
-            </button>
+                  &lt;/script&gt;
+                </code>
+              </pre>
+              <button title="Sao chép">
+                <span class="tooltiptext" style="display:none">Đã sao chép ✔️</span>
+                <span class="v-markdown-icon el-icon-document-copy"></span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="right_sidebar">
-        <div class="sticky_sidebar" style="top: 80px; max-height: calc(-88px + 100vh); overflow-y: hidden;">
-          <div class="index">
-            <div class="title">
-              <h4>MỤC LỤC</h4> 
-              <hr class="filler_line">
-            </div> 
-            <ul class="index_list">
-              <li class="index_item">
-                <a href="#_mo-dau-0" class="link active">Mở đầu</a>
-              </li>
-              <li class="index_item">
-                <a href="#_hoat-dong-cua-v-model-1" class="link">Hoạt động của v-model</a>
-              </li>
-              <li class="index_item">
-                <a href="#_nhung-loi-thuong-gap-2" class="link">Những lỗi thường gặp</a>
-              </li>
-              <li class="index_item">
-                <a href="#_tong-quan-3" class="link">Tổng quan</a>
-              </li>
-            </ul>
-          </div>
-        </div> 
+        <div class="right_sidebar">
+          <div class="sticky_sidebar" style="top: 80px; max-height: calc(-88px + 100vh); overflow-y: hidden;">
+            <div class="index">
+              <div class="title">
+                <h4>MỤC LỤC</h4> 
+                <hr class="filler_line">
+              </div> 
+              <ul class="index_list">
+                <li class="index_item">
+                  <a href="#_mo-dau-0" class="link active">Mở đầu</a>
+                </li>
+                <li class="index_item">
+                  <a href="#_hoat-dong-cua-v-model-1" class="link">Hoạt động của v-model</a>
+                </li>
+                <li class="index_item">
+                  <a href="#_nhung-loi-thuong-gap-2" class="link">Những lỗi thường gặp</a>
+                </li>
+                <li class="index_item">
+                  <a href="#_tong-quan-3" class="link">Tổng quan</a>
+                </li>
+              </ul>
+            </div>
+          </div> 
+        </div>
       </div>
     </div>
   </main>
@@ -300,6 +302,7 @@ import { ref } from 'vue'
 
 <style scoped>
 a {
+  color: #5488c7;
   text-decoration: none;
 }
 
@@ -509,6 +512,224 @@ ul {
   font-size: 14px;
   border-radius: 4px;
 }
+
+.container {
+  flex: 1 0 auto;
+  color: #1b1b1b;
+}
+
+.banner {
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 168px;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .5s ease-out;
+  object-fit: contain;
+}
+
+.content {
+  display: flex;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 15px 1.5rem;
+}
+
+.left_sidebar {
+  position: sticky;
+  top: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 50px;
+}
+
+.d-flex {
+  display: flex;
+}
+.position-relative {
+  position: relative;
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.avatar {
+
+} 
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vote {
+
+}
+
+.icon-btn {
+  
+}
+
+.upvote {
+
+}
+
+.downvote {
+
+}
+
+.points {
+
+}
+
+.text-muted {
+
+}
+
+.subscribe {
+
+}
+
+.a {
+
+}
+
+.a button {
+
+}
+
+.social {
+
+}
+
+.link {
+
+}
+
+.link--muted {
+
+}
+
+.main_content {
+
+}
+
+.heading {
+
+}
+
+.meta {
+
+}
+
+.meta_left {
+
+}
+
+.author {
+
+}
+
+.author img {
+
+}
+
+.author_info {
+
+}
+
+.d-flex {
+
+}
+
+.author_name {
+
+}
+
+.author_name a {
+
+}
+
+.author_name span {
+
+}
+
+.subscribe {
+
+}
+
+.stats {
+
+}
+
+.stats_item {
+
+}
+
+.stats_icon {
+
+}
+
+.middle {
+
+}
+
+.code {
+
+}
+
+.pre {
+
+}
+
+.index {
+
+}
+
+.title {
+
+}
+
+.index_list {
+
+}
+
+.index_item {
+
+}
+
+.filler_line {
+
+}
+
+.right_sidebar {
+
+}
+
+.sticky_sidebar {
+
+}
+
 
 
 
