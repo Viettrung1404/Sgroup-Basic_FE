@@ -138,27 +138,27 @@ let vote = computed(() => {
                   </a>
                 </div>
                 <div class="author_info">
-                  <div class="d-flex ">
-                    <div class="author_name .mg-0\.5rem">
+                  <div class="d-flex">
+                    <div class="author_name mg-0.5rem">
                       <a href="/u/Thanh_Tung">Huỳnh Thanh Tùng</a> 
-                      <span >@Thanh_Tung</span>
+                      <span class="text-muted">@Thanh_Tung</span>
                     </div> 
-                    <div class="subscribe">
+                    <div class="author_subscribe mg-0.5rem">
                       <button type="button">
                         <span>Theo dõi</span>
                       </button>
                     </div>
                   </div> 
                   <div class="stats">
-                    <span class="stats_item">
+                    <span class="stats_item text-muted">
                       <i aria-hidden="true" class="stats_icon fa fa-star"></i>
-                      363
+                      {{ vote + 363 }}
                     </span>
-                    <span class="stats_item">
+                    <span class="stats_item text-muted">
                       <i aria-hidden="true" class="stats_icon fa fa-user-plus"></i>
                       8
                     </span>
-                    <span class="stats_item">
+                    <span class="stats_item text-muted">
                       <i aria-hidden="true" class="stats_icon fa fa-pencil"></i>
                       29
                     </span> 
@@ -168,22 +168,22 @@ let vote = computed(() => {
               <div class="meta_right">
                 <div title="Dec 23rd, 2019 1:22 p.m." class="text-muted">
                   Đã đăng vào thg 12 23, 2019 8:22 CH
-                  <span title="4 phút đọc" class="post-reading_time is-divide is-divide--fit text-muted">4 phút đọc</span>
+                  <span title="4 phút đọc" class="text-muted"> - 4 phút đọc</span>
                 </div> 
                 <div class="d-flex align-items-center">
                   <div class="meta_nav_item mr-1 text-muted" data-tippy="" data-original-title="Lượt xem: 11197">
-                    <i aria-hidden="true" class="el-icon-view post-meta__icon"></i> 
+                    <i aria-hidden="true" class="meta_nav_icon"></i> 
                     <span>11.1K</span>
                   </div> 
                   <div class="meta_nav_item mr-1 text-muted" data-tippy="" data-original-title="Di chuyển đến bình luận">
                     <button type="button">
-                      <i class="fa fa-comments-o post-meta__icon"></i>
+                      <i class="fa fa-comments-o meta_nav_icon"></i>
                       <span>0</span>
                     </button>
                   </div> 
                   <div class="meta_nav_item text-muted" data-tippy="" data-original-title="Xem danh sách người bookmark">
                     <button type="button">
-                      <i class="fa fa-bookmark post-meta__icon"></i>
+                      <i class="fa fa-bookmark meta_nav_icon"></i>
                       <span>1</span>
                     </button>
                   </div>
@@ -759,35 +759,106 @@ ul {
 }
 
 .author_name {
-
+  align-self: center;
+  justify-self: center;
 }
 
 .author_name a {
-
+  margin-right: 5px;
+  font-weight: 700;
 }
 
 .author_name span {
 
 }
 
-.subscribe {
-
-}
-
-.stats {
-
+.author_subscribe button {
+  padding: 5px 15px !important;
+  font-size: 12px !important;
+  border-radius: 3px !important;
+  outline: none;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
 }
 
 .stats_item {
-
+  max-height: 1.25rem;
+  position: relative;
+  margin-right: 10px;
 }
 
 .stats_icon {
+  margin-right: 4px;
+  aspect-ratio: unset !important
+}
 
+.meta_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.meta_nav_item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+} 
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.meta_nav_icon {
+  margin-right: .25rem;
+  font-family: element-icons !important;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: initial;
+  display: inline-block;
+}
+
+.meta_nav_item button {
+  color: inherit;
+  font-size: inherit;
+  padding: 5px 6px;
+  margin-right: .25rem;
+  line-height: 1;
+  white-space: nowrap;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  border-radius: 4px;
+  background-color: inherit;
+  border: none;
+} 
+
+.meta h1 {
+  text-align: left;
+  line-height: 1.2;
+  font-weight: 700;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 2.5rem;
 }
 
 .middle {
-
+  
 }
 
 .code {
