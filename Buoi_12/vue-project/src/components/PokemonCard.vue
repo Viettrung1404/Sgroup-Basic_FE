@@ -22,7 +22,7 @@ const p = defineProps(['data']);
 </template>
 
 <style scoped>
-.section-list .list-item {
+.list-item {
     display: flex;
     flex-direction: column;
     max-width: calc(var(--width) - 10px);
