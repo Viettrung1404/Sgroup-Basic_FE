@@ -1,4 +1,6 @@
 <script setup>
+import { defineProps } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const p = defineProps(['data']);
 
@@ -7,7 +9,7 @@ const p = defineProps(['data']);
 <template>
 
 <div class="list-item">
-    <a :href="`/${p.data.name}`" class="pokemon">
+    <RouterLink :to="`/${p.data.name}/${ p.data.id }`" class="pokemon">
         <div class="id">#{{ p.data.id }}</div>
         <div class="image" :style="{ backgroundImage: `url(${p.data.image})` }"></div>
         <h3 class="name">{{ p.data.name }}</h3>
@@ -16,7 +18,7 @@ const p = defineProps(['data']);
             {{ type }}
             </div>
         </div>
-    </a>
+    </RouterLink>
 </div>
 
 </template>
